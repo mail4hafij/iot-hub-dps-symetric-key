@@ -3,7 +3,7 @@ The idea is to use Azure DPS to provision iot-devices at scale using group enrol
 
 <img src="iot-hub-dps.jpg" />
 
-## How to test
+## How to run locally
 There are two projects. DeviceSimulator that sends telemetery data to an IotHub. FunctionApp to receive telemetry data from IotHub. Create azure IotHub and Azure DPS and ServiceBus resources. Connect your IotHub to the DPS. Create a group enrollment in the DPS with symetric key Attestation type. Add a queue "DeviceSimulator" in the Service Bus. Add a message routing in the IotHub with a query ``` route="DeviceSimulator" ``` to route telemetry data to a Service Bus Queue you just created.
 
 
